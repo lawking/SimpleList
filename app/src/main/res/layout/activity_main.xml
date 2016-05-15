@@ -1,0 +1,139 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_playback"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/handle_btnlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/previous_music"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/previous_music_selector" />
+
+        <Button
+            android:id="@+id/play_music"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/play_selector" />
+        <Button
+            android:id="@+id/pause_music"
+            android:visibility="gone"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/pause" />
+
+        <Button
+            android:id="@+id/next_music"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/next_music_selector" />
+
+        <Button
+            android:id="@+id/repeatone_music"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="单曲循环"/>
+
+        <Button
+            android:id="@+id/repeatlist_music"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:text="列表循环" />
+
+        <Button
+            android:id="@+id/norepeatlist_music"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:text="顺序播放" />
+
+        <Button
+            android:id="@+id/shuffle_music"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:text="随机播放" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/music_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/handle_btnlayout"
+        android:layout_marginBottom="50dp" >
+    </ListView>
+
+    <RelativeLayout
+        android:id="@+id/singleSong_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <ImageView
+            android:id="@+id/music_album"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/apple_pic" />
+
+
+        <RelativeLayout
+            android:id="@+id/music_about_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignTop="@+id/music_album"
+            android:layout_toRightOf="@id/music_album" >
+
+            <TextView
+                android:id="@+id/bottom_song"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="5.0dp"
+                android:layout_marginLeft="5.0dp"
+                android:text="song"
+                android:textColor="#ffffff"/>
+            <TextView
+                android:id="@+id/bottom_singer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/bottom_song"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="5.0dp"
+                android:layout_marginTop="8.0dp"
+                android:text="singer"
+                android:textColor="#ffffff"/>"
+        </RelativeLayout>
+
+
+        <Button
+            android:id="@+id/play_queue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/play_queue_selector" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
